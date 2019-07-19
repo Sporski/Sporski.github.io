@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Prototype</title>
+    <link href="styles\app.css" rel="stylesheet" type="text/css" />
+    <script>
+      function getVar() {
+        var total = window.localStorage.getItem("amountPassed");
+        document.getElementById("output").innerHTML = total;
+      }
+    </script>
+    <style>
+  </style>
+  </head>
+  <body onload="getVar()">
+    <div class="header">
+      <img src="default\tyl.gif" />
+    </div>
+    <div class="content">
+        <h3>Diebold</h3>
+        <p id="output"></p>
+    </div>
+  </body>
+</html>

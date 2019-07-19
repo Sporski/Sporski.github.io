@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Prototype</title>
+    <link href="styles\app.css" rel="stylesheet" type="text/css" />
+    <script>
+      var total = window.localStorage.getItem("amountPassed");
+      var fives = 0;
+      var twenties = 0;
+      var fifties = 0;
+      var TotalFives = 0;
+      var TotalTwenties = 0;
+      var TotalFifties = 0;
+      var runningTotal = 0;
+      var leftover = total - runningTotal;
+
+      function getVars() {
+        document.getElementById("total").innerHTML = "$" + total;
+        document.getElementById("fives").innerHTML = fives;
+        document.getElementById("twenties").innerHTML = twenties;
+        document.getElementById("fifties").innerHTML = fifties;
+        document.getElementById("TotalFives").innerHTML = "$" + TotalFives;
+        document.getElementById("TotalTwenties").innerHTML = "$" + TotalTwenties;
+        document.getElementById("TotalFifties").innerHTML = "$" + TotalFifties;
+        document.getElementById("runningTotal").innerHTML = "$" + runningTotal;
+        refreshButtons();
+      }
+
+      function fewestBills() {
+        resetVars();
+        autoFill();
+      }
+
+      function resetVars() {
+        fives = 0;
+        twenties = 0;
+        fifties = 0;
+        TotalFives = 0;
+        TotalTwenties = 0;
+        TotalFifties = 0;
+        runningTotal = 0;
+        leftover = total - runningTotal;
+        getVars();
+      }
+
+      function autoFill() {
+        if (leftover > 0) {
+          if (leftover >= 50) {
+            while (leftover >= 50){
+              fifties = fifties + 1;
+              document.getElementById("fifties").innerHTML = fifties;
+              TotalFifties = TotalFifties + 50;
+              document.getElementById("TotalFifties").innerHTML = "$" + TotalFifties;
+              refreshTotal();
+            }
+          }
+          if (leftover >= 20) {
+            while (leftover >= 20) {
+              twenties = twenties + 1;
+              document.getElementById("twenties").innerHTML = twenties;
+              TotalTwenties = TotalTwenties + 20;
+              document.getElementById("TotalTwenties").innerHTML = "$" + TotalTwenties;
+              refreshTotal();
+            }
+          }
+          if (leftover >= 5) {
+            while (leftover >= 5) {
+              fives = fives + 1;
+              document.getElementById("fives").innerHTML = fives;
+              TotalFives = TotalFives + 5;
+              document.getElementById("TotalFives").innerHTML = "$" + TotalFives;
+              refreshTotal();
+            }
+          }
+        }
+      }
+
+      function refreshTotal() {
+        runningTotal = TotalFives + TotalTwenties + TotalFifties;
+        document.getElementById("runningTotal").innerHTML = "$" + runningTotal;
+        leftover = total - runningTotal;
+        refreshButtons();
+      }
+
+      function addFive() {
+        if ((runningTotal != total) && ((runningTotal + 5) <= total)) {
+          fives = fives + 1;
+          document.getElementById("fives").innerHTML = fives;
+          TotalFives = TotalFives + 5;
+          document.getElementById("TotalFives").innerHTML = "$" + TotalFives;
+          refreshTotal();
+        }
+      }
+      function addTwenties() {
+        if ((runningTotal != total) && ((runningTotal + 20) <= total)) {
+          twenties = twenties + 1;
+          document.getElementById("twenties").innerHTML = twenties;
+          TotalTwenties = TotalTwenties + 20;
+          document.getElementById("TotalTwenties").innerHTML = "$" + TotalTwenties;
+          refreshTotal();
+        }
+      }
+      function addFifties() {
+        if ((runningTotal != total) && ((runningTotal + 50) <= total)) {
+          fifties = fifties + 1;
+          document.getElementById("fifties").innerHTML = fifties;
+          TotalFifties = TotalFifties + 50;
+          document.getElementById("TotalFifties").innerHTML = "$" + TotalFifties;
+          refreshTotal();
+        }
+      }
+      function subFive() {
+        if (fives > 0) {
+          fives = fives - 1;
+          document.getElementById("fives").innerHTML = fives;
+          TotalFives = TotalFives - 5;
+          document.getElementById("TotalFives").innerHTML = "$" + TotalFives;
+          refreshTotal();
+        }
+      }
+      function subTwenties() {
+        if (twenties > 0) {
+          twenties = twenties - 1;
+          document.getElementById("twenties").innerHTML = twenties;
+          TotalTwenties = TotalTwenties - 20;
+          document.getElementById("TotalTwenties").innerHTML = "$" + TotalTwenties;
+          refreshTotal();
+        }
+      }
+      function subFifties() {
+        if (fifties > 0) {
+          fifties = fifties - 1;
+          document.getElementById("fifties").innerHTML = fifties;
+          TotalFifties = TotalFifties - 50;
+          document.getElementById("TotalFifties").innerHTML = "$" + TotalFifties;
+          refreshTotal();
+        }
+      }
+
+      function refreshButtons() {
+        if (runningTotal != total) {
+          document.getElementById("complete").disabled = true;
+          document.getElementById("complete").style.opacity = .25;
+        }
+        else {
+          document.getElementById("complete").disabled = false;
+          document.getElementById("complete").style.opacity = .90;
+        }
+      }
+
+    </script>
+    <style>
+  </style>
+  </head>
+  <body onload="getVars()">
+    <div class="header">
+      <img src="default\tyl.gif" />
+    </div>
+    <div class="content">
+      <div class="row">
+        <div class="column">
+          <h3>MTB Total:</h3>
+        </div>
+        <div class="column">
+          <h3 id="total"></h3>
+        </div>
+        <div class="column">
+          <h3 id="runningTotal"></h3>
+        </div>
+      </div>
+    </div>
+    <div class="grid-container">
+      <div class="grid-item"><img src="default\bill_large5.png" /></div>
+      <div class="grid-item"><button class="round-button-plus" onclick="addFive()">+</button></div>
+      <div class="grid-item"><h3 id="fives"></h3></div>
+      <div class="grid-item"><button class="round-button-minus" onclick="subFive()">---</button></div>
+      <div class="grid-item"><h3 id="TotalFives"></h3></div>
+      <div class="grid-item"><img src="default\bill_large20.png" /></div>
+      <div class="grid-item"><button class="round-button-plus" onclick="addTwenties()">+</button></div>
+      <div class="grid-item"><h3 id="twenties"></h3></div>
+      <div class="grid-item"><button class="round-button-minus" onclick="subTwenties()">---</button></div>
+      <div class="grid-item"><h3 id="TotalTwenties"></h3></div>
+      <div class="grid-item"><img src="default\bill_large50.png" /></div>
+      <div class="grid-item"><button class="round-button-plus" onclick="addFifties()">+</button></div>
+      <div class="grid-item"><h3 id="fifties"></h3></div>
+      <div class="grid-item"><button class="round-button-minus" onclick="subFifties()">---</button></div>
+      <div class="grid-item"><h3 id="TotalFifties"></div>
+    </div>
+    <div class="button-grid-container">
+      <div class="grid-item"><button class="resetAmounts" onclick="resetVars()">Reset Amounts</button></div>
+      <div class="grid-item"><button class="resetAmounts" onclick="autoFill()">Finish For Me</button></div>
+      <div class="grid-item"><button class="resetAmounts" onclick="fewestBills()">Fewest Bills</button></div>
+    </div>
+  </body>
+
+  <footer>
+    <hr class="c-divider l-margin-top--xlarge l-margin-bottom--large" />
+    <button class="cancelTrans" onclick="window.location.href = 'index.html'">Cancel Transaction</button>
+    <button class="complete" id="complete" onclick="resetVars()">Complete Transaction</button>
+
+  </footer>
+</html>

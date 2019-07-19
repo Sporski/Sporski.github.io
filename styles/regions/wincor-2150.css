@@ -1,0 +1,365 @@
+.default-region {
+  position: fixed; }
+
+.mp-ledger-instruction {
+  position: fixed;
+  left: 6.5vw;
+  top: 10.8333333333333vh;
+  width: 49.625vw;
+  height: 20.8333333333333vh; }
+
+.mp-ledger-info {
+  position: fixed;
+  left: 6.5vw;
+  top: 89.5vh;
+  width: 49.625vw;
+  height: 10.5vh; }
+
+.media-insert-video {
+  position: fixed;
+  left: 2.5vw;
+  top: 16.6666666666667vh;
+  width: 49.125vw;
+  height: 64.5vh; }
+
+.wizard-double-box {
+  position: fixed;
+  left: 3.125vw;
+  top: 22.5vh;
+  width: 51.125vw;
+  height: 74.5vh; }
+
+.wizard-single-box {
+  position: fixed;
+  left: 7.75vw;
+  top: 24.5vh;
+  width: 41.875vw;
+  height: 70.5vh; }
+
+.insert-prompt {
+  position: fixed;
+  left: 3.75vw;
+  top: 5vh;
+  width: 96.25vw;
+  height: 20vh; }
+
+.message1, .message2, .message3, .message4, .message5, .message6, .message7, .message8, .message9, .message10, .message11, .message12, .message13, .message14, .message15, .message16 {
+  left: 0;
+  position: fixed;
+  width: 100vw; }
+
+.message1 {
+  height: 6.46666666666667vh;
+  top: 6.26667vh; }
+
+.message2 {
+  height: 6.46666666666667vh;
+  top: 13.53333vh; }
+
+.message3 {
+  height: 0.733333333333333vh;
+  top: 20.8vh; }
+
+.message4 {
+  height: 0.733333333333333vh;
+  top: 26.03333vh; }
+
+.message5 {
+  height: 0.733333333333333vh;
+  top: 31.26667vh; }
+
+.message6 {
+  height: 0.733333333333333vh;
+  top: 36.5vh; }
+
+.message7 {
+  height: 0.733333333333333vh;
+  top: 41.73333vh; }
+
+.message8 {
+  height: 0.733333333333333vh;
+  top: 46.96667vh; }
+
+.message9 {
+  height: 0.733333333333333vh;
+  top: 52.2vh; }
+
+.message10 {
+  height: 0.733333333333333vh;
+  top: 57.43333vh; }
+
+.message11 {
+  height: 0.733333333333333vh;
+  top: 62.66667vh; }
+
+.message12 {
+  height: 0.733333333333333vh;
+  top: 67.9vh; }
+
+.message13 {
+  height: 0.733333333333333vh;
+  top: 73.13333vh; }
+
+.message14 {
+  height: 0.733333333333333vh;
+  top: 78.36667vh; }
+
+.message15 {
+  height: 0.733333333333333vh;
+  top: 83.6vh; }
+
+.message16 {
+  height: 0.733333333333333vh;
+  top: 88.83333vh; }
+
+.cm-message6 {
+  position: fixed;
+  left: 0px;
+  top: 46.6666666666667vh;
+  width: 100vw;
+  height: 13.3333333333333vh; }
+
+.t11 {
+  position: fixed;
+  left: 0px;
+  top: 35vh;
+  width: 100vw;
+  height: 33.7333333333333vh; }
+
+.t12 {
+  position: fixed;
+  left: 0px;
+  top: 35vh;
+  width: 100vw;
+  height: 48.7333333333333vh; }
+
+.t14 {
+  position: fixed;
+  left: 0px;
+  top: 35vh;
+  width: 100vw;
+  height: 62.9333333333333vh; }
+
+.t15 {
+  position: fixed;
+  left: 0px;
+  top: 35vh;
+  width: 100vw;
+  height: 17.9333333333333vh; }
+
+.t16 {
+  position: fixed;
+  left: 0px;
+  top: 21.6666666666667vh;
+  width: 100vw;
+  height: 13.3333333333333vh; }
+
+.t17 {
+  position: fixed;
+  left: 0px;
+  top: 20vh;
+  width: 100vw;
+  height: 32.5vh; }
+
+.t19 {
+  position: fixed;
+  left: 0px;
+  top: 18.3333333333333vh;
+  width: 100vw;
+  height: 65.4vh; }
+
+.t20 {
+  position: fixed;
+  left: 0px;
+  top: 18.3333333333333vh;
+  width: 100vw;
+  height: 20.4vh; }
+
+.t23 {
+  position: fixed;
+  left: 0px;
+  top: 21.6666666666667vh;
+  width: 100vw;
+  height: 13.3333333333333vh; }
+
+.t24 {
+  position: fixed;
+  left: 0px;
+  top: 21.6666666666667vh;
+  width: 100vw;
+  height: 13.3333333333333vh; }
+
+.t27 {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 12.9333333333333vh; }
+
+.t31 {
+  position: fixed;
+  left: 0px;
+  top: 26.6666666666667vh;
+  width: 100vw;
+  height: 73.3333333333333vh; }
+
+.t32 {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 12.9333333333333vh; }
+
+.es {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 16.2666666666667vh; }
+
+.em {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 24.6vh; }
+
+.el {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 32.9333333333333vh; }
+
+.t01 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 100vh; }
+
+.pr2menu-prompt {
+  position: fixed;
+  left: 0px;
+  top: 18.3333333333333vh;
+  width: 100vw;
+  height: 28.7333333333333vh; }
+
+.dpprepare-prompt {
+  position: fixed;
+  left: 0px;
+  top: 32.5vh;
+  width: 100vw;
+  height: 26.6666666666667vh; }
+
+.t04 {
+  position: fixed;
+  left: 0px;
+  top: 87.7vh;
+  width: 100vw;
+  height: 10.8333333333333vh; }
+
+.attention {
+  position: fixed;
+  left: 6.375vw;
+  top: 8.83333333333333vh;
+  width: 86.25vw;
+  height: 19.3333333333333vh; }
+
+.check-items-count,
+.check-items-deposit-count,
+.check-items-returned-count {
+  top: calc(100vh / 3000 * 2775); }
+
+.edit-check-amount-box,
+.correct-amount-prompt {
+  top: calc(100vh / 3000 * 1750); }
+
+.enter-amount {
+  top: calc(100vh / 3000 * 1800); }
+
+.slider {
+  line-height: calc(100vh / 3000 * 400); }
+
+.cash-summary-background {
+  height: calc(100vh / 3000 * 2400); }
+
+.t23-Change-Pin {
+  position: fixed;
+  left: 0px;
+  top: 21.6666666666667vh;
+  width: 100vw;
+  height: 13.3333333333333vh; }
+
+[ph-position="101"],
+[ph-position="201"] {
+  top: 33.9666666666667vh; }
+
+[ph-position="102"],
+[ph-position="202"] {
+  top: 50.1vh; }
+
+[ph-position="103"],
+[ph-position="203"] {
+  top: 66.2666666666667vh; }
+
+[ph-position="104"],
+[ph-position="204"] {
+  top: 82.4vh; }
+
+.t01 {
+  top: -1.33333333333333vh; }
+
+.t13 {
+  top: 31.6666666666667vh; }
+
+.t30 {
+  top: 15vh; }
+
+.t10,
+.t13,
+.t25 {
+  top: 35vh; }
+
+.t12 {
+  top: 37.0666666666667vh; }
+
+.t16,
+.t17,
+.t23,
+.t24,
+.t26 {
+  top: 18.3333333333333vh; }
+
+.t19 {
+  top: 20.4vh; }
+
+.edit-check-scrollbar {
+  top: calc(100vh / 3000 * 1950); }
+
+.check-items-count,
+.check-items-deposit-count,
+.check-items-returned-count {
+  top: calc(100vh / 3000 * 2650); }
+
+.edit-check-amount-box,
+.correct-amount-prompt {
+  top: calc(100vh / 3000 * 1570); }
+
+.enter-amount {
+  top: calc(100vh / 3000 * 1620); }
+
+.cash-summary-background {
+  height: calc(100vh / 3000 * 2300); }
+
+.image-size {
+  height: calc(100vh / 3000 * 900); }
+
+.t23-Change-Pin {
+  position: fixed;
+  left: 0px;
+  top: 21.6666666666667vh;
+  width: 100vw;
+  height: 13.3333333333333vh; }
+
+/*# sourceMappingURL=wincor-2150.css.map */
